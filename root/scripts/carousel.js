@@ -1,23 +1,17 @@
 const carousel = document.querySelector("#carousel");
-if(!carousel) {
-    console.log("Invalid carousel selector");
-}
-
 const slides = document.querySelectorAll(".slide");
-if(slides.length <= 0) {
-    console.log("Invalid slides selector");
-}
-
 const nextBtn = document.getElementById("carousel-btn-next");
 const prevBtn = document.getElementById("carousel-btn-prev");
 
+// Keeps track of which slide we're on
 let currentSlideIndex = 0;
 
+// Changes slide by hiding every slide we're not currently on
 const updateSlideIndex = (increment) => {
     currentSlideIndex += increment;
 
     slides.forEach((slide, i) => {
-        if(i != (currentSlideIndex % slides.length)){
+        if(i != (Math.abs(currentSlideIndex) % slides.length)){
             slide.style.display = "none";
         } else {
             slide.style.display = "block";

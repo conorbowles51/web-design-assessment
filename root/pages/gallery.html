@@ -9,6 +9,14 @@
   </head>
   <body>
     <section id="gallery">
+      <nav id="navbar">
+        <p id="logo">[Restaurant Logo]</p>
+        <a>Home</a>
+        <a>Menu</a>
+        <a>Gallery</a>
+        <a>Contact</a>
+      </nav>
+
       <h2>Gallery</h2>
 
       <div id="carousel-container">
@@ -16,23 +24,36 @@
         <div id="carousel" class="carousel">
           <div id="slides">
             <div id="slide 1" class="slide">
-              <p>Slide 1</p>
+              <p class="slide-caption">Our bar</p>
               <img src="../assets/pic1.jpg" />
             </div>
 
             <div id="slide 2" class="slide">
-              <p>Slide 2</p>
+              <p class="slide-caption">Dining area</p>
               <img src="../assets/pic2.jpg" />
             </div>
 
             <div id="slide 3" class="slide">
-              <p>Slide 3</p>
+              <p class="slide-caption">Lunch room</p>
               <img src="../assets/pic3.jpg" />
             </div>
           </div>
         </div>
         <button class="carousel-btn" id="carousel-btn-next">Next</button>
       </div>
+
+      <footer id="footer">
+        <div class="footer-section">
+          <p>123 Restaurant Street, Dublin, Ireland</p>
+          <p>restaurant@gmail.com</p>
+          <p>081 234 5678</p>
+        </div>
+
+        <div class="footer-section">
+          <a href="">Privacy policy</a>
+          <p id="copyright">© Copyright 'Restaurant' 2024</p>
+        </div>
+      </footer>
     </section>
 
     <script src="../scripts/carousel.js" defer></script>
