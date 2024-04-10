@@ -1,0 +1,9 @@
+reservation.html
+game.html
+styles.css
+reservation.js
+spinGame.js
+restaurant-logo.png
+restaurant-name.png
+
+to update as required by the rest of the project
