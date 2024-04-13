@@ -1,62 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Web Design Assessment</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<html lang="en">
+<head>
+    <title>Gallery - The Restaurant</title>
+    <!-- Using Bootstrap CSS from CDN for consistent, reliable loading -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Correct relative path to the CSS file assuming gallery.html is inside /pages -->
+    <link rel="stylesheet" type="text/css" href="../styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
-  </head>
-  <body>
-    <section id="gallery">
-      <nav id="navbar">
-        <p id="logo">[Restaurant Logo]</p>
-        <a>Home</a>
-        <a>Menu</a>
-        <a>Gallery</a>
-        <a>Contact</a>
-      </nav>
-
-      <h2>Gallery</h2>
-
-      <div id="carousel-container">
-        <button class="carousel-btn" id="carousel-btn-prev">Previous</button>
-        <div id="carousel" class="carousel">
-          <div id="slides">
-            <div id="slide 1" class="slide">
-              <p class="slide-caption">Our bar</p>
-              <img src="../assets/pic1.jpg" />
+</head>
+<body style="background: url('../assets/backdrop.jpg'); background-size: cover;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">The Restaurant</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="game.html">Game</a> <!-- Correctly included "Game" link -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservation.html">Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gallery.html">Gallery</a> <!-- Active link for current page -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <div id="slide 2" class="slide">
-              <p class="slide-caption">Dining area</p>
-              <img src="../assets/pic2.jpg" />
+        </nav>
+    </header>
+    <main>
+        <h1>Gallery</h1>
+        <div id="carousel-container">
+            <button class="carousel-btn" id="carousel-btn-prev">Previous</button>
+            <div id="carousel" class="carousel">
+                <div id="slides">
+                    <div class="slide">
+                        <p class="slide-caption">Our bar</p>
+                        <img src="../assets/pic1.jpg" alt="Our bar"/>
+                    </div>
+                    <div class="slide">
+                        <p class="slide-caption">Dining area</p>
+                        <img src="../assets/pic2.jpg" alt="Dining area"/>
+                    </div>
+                    <div class="slide">
+                        <p class="slide-caption">Lunch room</p>
+                        <img src="../assets/pic3.jpg" alt="Lunch room"/>
+                    </div>
+                </div>
             </div>
-
-            <div id="slide 3" class="slide">
-              <p class="slide-caption">Lunch room</p>
-              <img src="../assets/pic3.jpg" />
-            </div>
-          </div>
+            <button class="carousel-btn" id="carousel-btn-next">Next</button>
         </div>
-        <button class="carousel-btn" id="carousel-btn-next">Next</button>
-      </div>
-
-      <footer id="footer">
-        <div class="footer-section">
-          <p>123 Restaurant Street, Dublin, Ireland</p>
-          <p>restaurant@gmail.com</p>
-          <p>081 234 5678</p>
-        </div>
-
-        <div class="footer-section">
-          <a href="">Privacy policy</a>
-          <p id="copyright">© Copyright 'Restaurant' 2024</p>
-        </div>
-      </footer>
-    </section>
-
+    </main>
+    <footer>
+        <p>All rights reserved: © NCI 2024<br>Owners: Cormac Boland, Alex Barquero & Conor Bowles</p>
+    </footer>
     <script src="../scripts/carousel.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    <!-- Using Bootstrap JS from CDN to ensure no local path issues -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
