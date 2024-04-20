@@ -8,11 +8,12 @@
     <link rel="stylesheet" type="text/css" href="../styles.css"/>
     <!-- Viewport meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Change: Added Google Fonts as per pr req -->
 </head>
 <body style="background: url('../assets/backdrop.jpg'); background-size: cover;"> <!-- Updated background for full coverage and correct path -->
     <header>
         <!-- Navbar implemented using Bootstrap for responsive navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <!-- Corrected navbar branding link to point to the homepage -->
                 <a class="navbar-brand" href="../index.html">The Restaurant</a> 
@@ -51,15 +52,17 @@
         <!-- Form for email input and promotional consent -->
         <form id="gameForm">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required>  <!-- Required for input validation -->
             <label><input type="checkbox" id="promo" name="promo" required> Accept promotional emails</label>
             <button type="button" onclick="spinWheel()">Spin!</button>
         </form>
         <div id="result"></div> <!-- Display area for game results -->
+		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </main>
     <!-- Bootstrap and custom JavaScript for interactive components -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/spinGame.js" defer></script>
+	<script src="../scripts/highContrast.js"></script>
     <footer>
         <!-- Simplified footer consistent across the site -->
         <p>All rights reserved: © NCI 2024</p>

@@ -7,10 +7,11 @@
     <!-- Correct relative path to the CSS file assuming menu.html is inside /pages -->
     <link rel="stylesheet" type="text/css" href="../styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Change: Added Google Fonts as per pr req -->
 </head>
 <body style="background: url('../assets/backdrop.jpg'); background-size: cover;">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">The Restaurant</a> <!-- Correct path to the home page in the root directory -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -58,9 +59,11 @@
             <p>Choice of Soda: Orange, Coke, 7up, Sparkling Water</p>
             <p>Choice of Alcoholic Beverages: Heiniken, Coors, Bulmers, Budweiser, House White/Red Wine</p>
         </section>
+		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </main>
     <!-- Using Bootstrap JS from CDN to avoid any local path issues -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../scripts/highContrast.js"></script>
     <footer>
         <p>All rights reserved: © NCI 2024</p> <!-- Consistent footer across all pages -->
     </footer>

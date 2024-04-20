@@ -7,11 +7,12 @@
     <!-- Correct relative path to the CSS file assuming gallery.html is inside /pages -->
     <link rel="stylesheet" type="text/css" href="../styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- removed jquery link, carousel.js uses standard js, so no need -->
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Change: Added Google Fonts as per pr req -->
 </head>
 <body style="background: url('../assets/backdrop.jpg'); background-size: cover;">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">The Restaurant</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -51,25 +52,31 @@
                 <div id="slides">
                     <div class="slide">
                         <p class="slide-caption">Our bar</p>
-                        <img src="../assets/pic1.jpg" alt="Our bar"/>
+                        <img src="../assets/pic1.jpg" alt="Our bar"/> <!-- Updated to non copyright image -->
                     </div>
                     <div class="slide">
                         <p class="slide-caption">Dining area</p>
-                        <img src="../assets/pic2.jpg" alt="Dining area"/>
+                        <img src="../assets/pic2.jpg" alt="Dining area"/> <!-- Updated to non copyright image -->
                     </div>
                     <div class="slide">
                         <p class="slide-caption">Lunch room</p>
-                        <img src="../assets/pic3.jpg" alt="Lunch room"/>
+                        <img src="../assets/pic3.jpg" alt="Lunch room"/> <!-- Updated to non copyright image -->
+                    </div>
+                    <div class="slide">
+                        <p class="slide-caption">Our Team</p> <!-- Added new slide caption -->
+                        <img src="../assets/pic4.jpg" alt="Our team"/> <!-- Added 4th image as per pr req-->
                     </div>
                 </div>
             </div>
             <button class="carousel-btn" id="carousel-btn-next">Next</button>
-        </div>
+        </div>	
     </main>
     <footer>
         <p>All rights reserved: © NCI 2024<br>Owners: Cormac Boland, Alex Barquero & Conor Bowles</p>
+		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </footer>
     <script src="../scripts/carousel.js" defer></script>
+	<script src="../scripts/highContrast.js"></script>
     <!-- Using Bootstrap JS from CDN to ensure no local path issues -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

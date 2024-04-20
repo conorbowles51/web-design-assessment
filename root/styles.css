@@ -1,26 +1,34 @@
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
 
-html,
-body {
+/* Basic Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Font Assignments */
 body {
+    font-family: 'Roboto', sans-serif; /* Main body font */
     background-color: #e7e7e7;
 }
 
+h1, h2, h3 {
+    font-family: 'Merriweather', serif; /* Headings font */
+    color: #333;
+}
+
+button, .nav-link {
+    font-family: 'Montserrat', sans-serif; /* Buttons and navigation links font */
+}
+
+/* General Styles */
 button {
     background: white;
-    height: fit-content;
-    width: 150px;
     padding: 10px;
     border-radius: 25px;
-    font: inherit;
     border: 1px solid #18181b;
-    transition: all 0.2s linear;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 button:hover {
@@ -28,84 +36,58 @@ button:hover {
     color: white;
 }
 
-#navbar,
-#footer {
+#navbar, #footer {
+    background-color: black;
+    color: white;
     display: flex;
     align-items: center;
-    width: 100%;
-    background-color: white;
-    padding-inline: 100px;
-    padding-block: 20px;
-    justify-content: left;
-    align-items: start;
-    font-weight: 600;
-    gap: 2rem;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-#navbar {
-    border-bottom: 1px  solid #18181b;
-    margin-bottom: 40px;
+/* High Contrast Mode - Ensures all text is white */
+.high-contrast, .high-contrast * {
+    background-color: #000; /* Background color for high contrast */
+    color: #fff !important; /* White text for high visibility */
 }
 
-#footer {
-    border-top: 1px  solid #18181b;
-    margin-top: 40px; 
-    font-size: 0.85rem;
-    justify-content: space-between;
-}
 
-.footer-section{
-    display: flex;
-    flex-direction: column;
-}
 
-#copyright {
-    font-size: 0.75rem;
-    font-style: italic;
-}
-
-#gallery {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#logo {
-    margin-right: 50px; 
-    font-weight: 900;
-}
-
+/* Carousel Styles */
 #carousel-container {
-    width: 100%;
     display: flex;
-    gap: 70px;
     justify-content: center;
     align-items: center;
+    gap: 70px;
+    padding: 20px;
     margin-bottom: 80vh;
 }
 
 #carousel {
     width: 1000px;
-    height: 70px;
     display: flex;
     position: relative;
 }
 
 .slide {
+    width: 100%;
     position: absolute;
+    transition: transform 0.5s ease;
 }
 
 .slide img {
     width: 100%;
+    height: auto;  /* Maintain aspect ratio */
     border-radius: 40px;
-    border: 2px solid #18181b;
 }
 
 .slide-caption {
-    font-size: 2rem;
-    font-style: italic;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Improve visibility of text over images */
+    font-family: 'Merriweather', serif;
 }
 

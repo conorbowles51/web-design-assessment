@@ -7,10 +7,11 @@
     <!-- Change: Ensured CSS path is likely correct, add root path if necessary -->
     <link rel="stylesheet" type="text/css" href="styles.css"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Change: Added Google Fonts as per pr req -->
 </head>
 <body style="background: url('assets/backdrop.jpg'); background-size: cover;">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">The Restaurant</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,11 +54,13 @@
             <p>Saturday to Sunday: 15:00 - 22:00</p>
         </section>
         <button onclick="location.href='pages/reservation.html'">Book Here</button>
+		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </main>
     <footer>
         <p>All rights reserved: © NCI 2024<br>Owners: Cormac Boland, Alex Barquero & Conor Bowles</p>
     </footer>
     <!-- Change: Using Bootstrap's CDN for the JS to avoid any local path issues -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="scripts/highContrast.js"></script>
 </body>
 </html>

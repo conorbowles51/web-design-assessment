@@ -2,41 +2,27 @@
 <html lang="en">
 <head>
     <title>Reservation System</title>
-    <!-- Using Bootstrap CSS from CDN for consistent, reliable loading -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Correct relative path to the CSS file assuming reservation.html is inside /pages -->
     <link rel="stylesheet" type="text/css" href="../styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Change: Added Google Fonts as per pr req -->
 </head>
 <body style="background: url('../assets/backdrop.jpg'); background-size: cover;">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">The Restaurant</a> <!-- Correct path to the home page in the root directory -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="../index.html">The Restaurant</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Home</a> <!-- Corrected path to home -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a> <!-- Relative paths within the pages directory -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="game.html">Game</a> <!-- Relative paths within the pages directory -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="reservation.html">Reservation</a> <!-- Active page link -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Gallery</a> <!-- Relative paths within the pages directory -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a> <!-- Relative paths within the pages directory -->
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,13 +44,14 @@
             <button type="submit">Reserve</button>
         </form>
         <p>For reservations of more than 8 people, please give us a call.</p>
+        <div id="msg"></div>  <!-- Message display area -->
+		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </main>
-    <!-- Using Bootstrap JS from CDN to avoid any local path issues -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Correct relative path to local JS file assuming it's in the /scripts directory in the root -->
     <script src="../scripts/reservation.js"></script>
+	<script src="../scripts/highContrast.js"></script>
     <footer>
-        <p>All rights reserved: © NCI 2024</p> <!-- Consistent footer across all pages -->
+        <p>All rights reserved: © NCI 2024</p>
     </footer>
 </body>
 </html>
