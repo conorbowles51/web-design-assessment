@@ -1,30 +1,36 @@
-const carousel = document.querySelector("#carousel");
 const slides = document.querySelectorAll(".slide");
-const nextBtn = document.getElementById("carousel-btn-next");
-const prevBtn = document.getElementById("carousel-btn-prev");
+const thumbnails = document.querySelectorAll(".thumbnail");
+const imageDescription = document.getElementById("image-description");
 
-// Keeps track of which slide we're on
-let currentSlideIndex = 0;
+const descriptions = [
+    "Our bar offers a variety of drinks and a cozy atmosphere.",
+    "Dine in our beautifully designed dining area that offers a comfortable dining experience.",
+    "Our lunch room is perfect for casual dining and small gatherings.",
+    "Meet our wonderful team who make everything possible!"
+];
 
-// Changes slide by hiding every slide we're not currently on
-const updateSlideIndex = (increment) => {
-    currentSlideIndex += increment;
-
+// Function to change slides and set description
+const showSlide = (index) => {
     slides.forEach((slide, i) => {
-        if(i != (Math.abs(currentSlideIndex) % slides.length)){
-            slide.style.display = "none";
-        } else {
-            slide.style.display = "block";
-        }
+        slide.style.display = i === index ? "block" : "none";
     });
-}
+    // Set the description text
+    imageDescription.textContent = descriptions[index];
+};
 
-updateSlideIndex(0);
-
-nextBtn.addEventListener("click", () => {
-    updateSlideIndex(1);
+// Adding event listeners to thumbnails for navigation
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        showSlide(index);
+    });
 });
 
-prevBtn.addEventListener("click", () => {
-    updateSlideIndex(-1);
-})
+// Adding click event listeners to slides to show descriptions
+slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+        imageDescription.textContent = descriptions[index]; // Display text when slide is clicked
+    });
+});
+
+// Initialize the first slide to show
+showSlide(0);

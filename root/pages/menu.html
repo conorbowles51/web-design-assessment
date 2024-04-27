@@ -11,9 +11,10 @@
 </head>
 <body style="background: url('../assets/backdrop.jpg'); background-size: cover;">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">The Restaurant</a> <!-- Correct path to the home page in the root directory -->
+                <a class="navbar-brand" href="../index.html">
+					<img src="../assets/logo.jpg" alt="The Foobar Logo" style="height: 36px;"></a> <!-- Correct path to the home page in the root directory -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -59,13 +60,14 @@
             <p>Choice of Soda: Orange, Coke, 7up, Sparkling Water</p>
             <p>Choice of Alcoholic Beverages: Heiniken, Coors, Bulmers, Budweiser, House White/Red Wine</p>
         </section>
-		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </main>
     <!-- Using Bootstrap JS from CDN to avoid any local path issues -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../scripts/highContrast.js"></script>
     <footer>
-        <p>All rights reserved: © NCI 2024</p> <!-- Consistent footer across all pages -->
+        <p>All rights reserved: © NCI 2024<br>Owners: Cormac Boland, Alex Barquero & Conor Bowles</p>
+		<button onclick="location.href='reservation.html'">Book Now!</button>
+		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </footer>
 </body>
 </html>
