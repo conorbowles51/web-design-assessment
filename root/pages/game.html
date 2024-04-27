@@ -13,10 +13,11 @@
 <body style="background: url('../assets/backdrop.jpg'); background-size: cover;"> <!-- Updated background for full coverage and correct path -->
     <header>
         <!-- Navbar implemented using Bootstrap for responsive navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid">
                 <!-- Corrected navbar branding link to point to the homepage -->
-                <a class="navbar-brand" href="../index.html">The Restaurant</a> 
+				<a class="navbar-brand" href="../index.html">
+					<img src="../assets/logo.jpg" alt="The Foobar Logo" style="height: 36px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,15 +58,15 @@
             <button type="button" onclick="spinWheel()">Spin!</button>
         </form>
         <div id="result"></div> <!-- Display area for game results -->
-		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </main>
     <!-- Bootstrap and custom JavaScript for interactive components -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/spinGame.js" defer></script>
 	<script src="../scripts/highContrast.js"></script>
     <footer>
-        <!-- Simplified footer consistent across the site -->
-        <p>All rights reserved: © NCI 2024</p>
+        <p>All rights reserved: © NCI 2024<br>Owners: Cormac Boland, Alex Barquero & Conor Bowles</p>
+		<button onclick="location.href='reservation.html'">Book Now!</button>
+		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </footer>
 </body>
 </html>

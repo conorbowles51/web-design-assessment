@@ -12,9 +12,10 @@
 </head>
 <body style="background: url('../assets/backdrop.jpg'); background-size: cover;">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">The Restaurant</a>
+                <a class="navbar-brand" href="../index.html">
+					<img src="../assets/logo.jpg" alt="The Foobar Logo" style="height: 36px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,8 +47,14 @@
     </header>
     <main>
         <h1>Gallery</h1>
-        <div id="carousel-container">
-            <button class="carousel-btn" id="carousel-btn-prev">Previous</button>
+			<div id="carousel-thumbnails">
+				<img class="thumbnail" src="../assets/pic1.jpg" alt="Thumbnail of our bar">
+				<img class="thumbnail" src="../assets/pic2.jpg" alt="Thumbnail of dining area">
+				<img class="thumbnail" src="../assets/pic3.jpg" alt="Thumbnail of lunch room">
+				<img class="thumbnail" src="../assets/pic4.jpg" alt="Thumbnail of our team">
+			</div>
+			<div id="image-description" class="image-description" style="text-align:center; margin-top:20px;"></div>
+			<div id="carousel-container">
             <div id="carousel" class="carousel">
                 <div id="slides">
                     <div class="slide">
@@ -68,11 +75,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-btn" id="carousel-btn-next">Next</button>
-        </div>	
+        </div>
     </main>
     <footer>
         <p>All rights reserved: © NCI 2024<br>Owners: Cormac Boland, Alex Barquero & Conor Bowles</p>
+		<button onclick="location.href='reservation.html'">Book Now!</button>
 		<button id="highContrastToggle" onclick="toggleHighContrast()">High Contrast</button>
     </footer>
     <script src="../scripts/carousel.js" defer></script>
